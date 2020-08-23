@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+/*-----共通部分-----*/
+html {
+  font-size:100%;
+  max-width: 99vw;
+}
+body {
+  line-height:2.5;
+  color:#281a14;
+}
+a {
+  text-decoration: none;
+    color:#444;
+}
+a:hover {
+  color:#b0e0e6;
+}
+
+p {
+  color: #444;
+}
+img {
+  max-width:100%;
+}
+
+ul {
+  list-style: none;
+}
+h1 {
+  font-size: 3.3rem;
+  color: #444;
+}
+
+h2 {
+  font-size: 2rem;
+  color :#444;
+}
+
+/*-----ヘッダー-----*/
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width:210px;
+  margin-top: 15px;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 1;
+  padding-right: 70px;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+.main-nav li a {
+ display: table;
+ margin-top: 1px;
+ padding: 14px 10px;
+ width: 100%;
+ text-decoration: none;
+ text-align: left;
+ vertical-align: middle;
+ color: #444;
+ overflow: hidden;
+ transition:all .5s ease-out;
+}
+
+.main-nav > li:first-child a {
+ margin-top: 0;
+}
+
+.main-nav li a:hover {
+ background: ;
+ transition:all .5s ease-out;
+}
+
+.main-nav li ul {
+ margin: 0;
+ padding: 0;
+}
+
+.main-nav li li a {
+ display: block;
+ margin-top: 0;
+ padding: 0 10px;
+ height: 0;
+ background: #444;
+ color: #fff;
+ transition:all .5s ease-out;
+}
+
+.main-nav > li:hover li a {
+ display: table;
+ margin-top: 1px;
+ padding: 10px;
+ width: 100%;
+ height: 1em;
+ transition:all .5s ease-out;
+}
+
+.main-nav > li:hover li a:hover {
+ background: #b0e0e6;
+ transition:all .5s ease-out;
+}
+
+/*-----メイン-----*/
+.home-top {
+  height: 85vh;
+}
+
+.home-top h2 {
+  font-size: 2.3rem;
+  color: #444;
+}
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  height: 85vh;
+  position   : absolute;
+  z-index: 0;
+  top        : 15vh;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+  background-image : url(images/home-image1.jpg);
+  background-size: cover;
+  background-color:rgba(200,200,200,0.4);
+  background-blend-mode:lighten;
+
+}
+.box .src2 {
+  background-image : url(images/home-image2.jpg);
+  animation-delay  : 5s;
+  background-size: cover;
+  background-color:rgba(200,200,200,0.4);
+  background-blend-mode:lighten;
+
+}
+.box .src3 {
+  background-image : url(images/home-image3.jpg);
+  animation-delay  : 10s;
+  background-size: cover;
+  background-color:rgba(200,200,200,0.4);
+  background-blend-mode:lighten;
+
+}
+.box .src4 {
+  background-image : url(images/);
+  animation-delay  : 15s;
+  background-size: cover;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+.home-comennt {
+  color: black;
+  font-size: 2rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+/*----SNS----------------------*/
+/* ボタン全体 */
+.flowbtn10{
+display:inline-block;
+font-size:35px;
+text-decoration:none;
+transition:.5s;
+color:#444;
+}
+
+.flowbtn10 .fa-facebook-f {
+  padding-right: 10px;
+}
+.flowbtn10 .fa-line {
+padding-right: 3px
+}
+
+.flowbtn10 .fa-instagram,.flowbtn10 .fa-get-pocket,.flowbtn10 .fa-get-pocket,.flowbtn10 .fa-line{
+font-size:38px;
+}
+
+.flowbtn10 .fa-twitter:hover{
+color:#55acee;
+}
+
+
+.flowbtn10 .fa-instagram:hover{
+color:#c6529a;
+}
+
+.flowbtn10 .fa-facebook-f:hover{
+color:#3b5998;
+}
+
+.flowbtn10 .fa-youtube:hover{
+color:#fc0d1c;
+}
+
+.flowbtn10 .fa-line:hover{
+color:#00c300;
+}
+
+ul.snsbtniti{
+padding:0!important;
+}
+/* アイコン全体の位置 */
+.snsbtniti{
+display:flex;
+flex-direction: column;
+position: absolute;
+top: 20%;
+left: 95%;
+text-align: right;
+
+
+}
+/* アイコン同士の余白 */
+.snsbtniti li{
+  padding-right: 30px;
+  padding-top: 20px;
+}
+/*---------------紹介文---------------------------------------------------------*/
+.home-introduce  {
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.introduce1 {
+  margin-top: 300px;
+}
+.introduce2 {
+  margin-top: 150px;
+}
+
+.introduce3 {
+  margin-top: 150px;
+}
+
+.intro-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-introduce img {
+  width: 540px;
+  height: 380px;
+  object-fit: cover;
+}
+
+.introduce3 img {
+  height: 420px;
+}
+
+
+/*-----コンテンツ部分-----*/
+.content-title {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.news {
+  display:inline-block;
+  text-align: left;
+}
+
+.lifeevent {
+  padding-top: 90px;
+}
+.main-content {
+  padding-bottom: 150px;
+  text-align: center;
+}
+.main-content h2 {
+  text-align: center;
+}
+.under{
+  border-bottom: solid 1px #444;
+  padding-bottom: 12px;
+}
+.grid-wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 15% 15% 15%;
+  grid-row-gap: 100px;
+  margin-top:6%;
+  margin-bottom: 50px;
+}
+
+.grid-wrapper {
+  text-align: center;
+}
+
+.sub-content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+.service {
+  width: 40vw;
+}
+
+}
+.service1　{
+ display: flex;
+ flex-wrap: wrap;
+}
+.oyakudachi0 {
+  display: flex;
+  justify-content: space-between;
+}
+.oyakudachi1 {
+width: 50vw;
+}
+/*-----フッター-----*/
+.footer-contact {
+  padding-left: 140px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: solid 2px #444;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px #444;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-nav li {
+  padding-left: 25px;
+}
